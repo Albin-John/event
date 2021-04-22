@@ -13,6 +13,7 @@
         "security/ir.model.access.csv",
         "views/event_staff_role_view.xml",
         "views/event_staff_view.xml",
+        "views/event_view.xml",
     ],
     "qweb": [],
     "installable": True,

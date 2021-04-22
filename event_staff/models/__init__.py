@@ -3,3 +3,4 @@
 
 from . import event_staff_role
 from . import event_staff
+from . import event
