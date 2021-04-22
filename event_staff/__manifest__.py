@@ -9,7 +9,11 @@
     "version": "13.0.1.0.0",
     "depends": ["event"],
     "summary": "Event Staff",
-    "data": ["security/ir.model.access.csv", "views/event_staff_role_view.xml"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/event_staff_role_view.xml",
+        "views/event_staff_view.xml",
+    ],
     "qweb": [],
     "installable": True,
     "auto_install": False,

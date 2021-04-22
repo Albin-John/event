@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- EVENT STAFF TREE -->
+    <record id="view_event_staff_tree" model="ir.ui.view">
+        <field name="name">event.staff.tree</field>
+        <field name="model">event.staff</field>
+        <field name="arch" type="xml">
+            <tree string="Event Staff" editable="top">
+                <field name="contact" />
+                <field name="role" />
+                <field name="event_id" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <!-- EVENT STAFF ACTIONS -->
+    <record id="act_event_staff" model="ir.actions.act_window">
+        <field name="res_model">event.staff</field>
+        <field name="name">Event Staff</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>
