@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- EVENT STAFF ROLE FORM -->
+    <record id="view_event_staff_role_form" model="ir.ui.view">
+        <field name="name">event.staff.role.form</field>
+        <field name="model">event.staff.role</field>
+        <field name="arch" type="xml">
+            <form string="Event Staff Role">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- EVENT STAFF ROLE TREE -->
+    <record id="view_event_staff_role_tree" model="ir.ui.view">
+        <field name="name">event.staff.role.tree</field>
+        <field name="model">event.staff.role</field>
+        <field name="arch" type="xml">
+            <tree string="Event Staff Role">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <!-- EVENT STAFF ROLE ACTIONS -->
+    <record id="act_event_staff_role" model="ir.actions.act_window">
+        <field name="res_model">event.staff.role</field>
+        <field name="name">Event Staff Role</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- EVENT STAFF ROLE Menu items -->
+    <menuitem
+        name="Event Staff Roles"
+        id="menu_event_staff_role"
+        action="act_event_staff_role"
+        parent="event.menu_event_configuration"
+    />
+</odoo>
