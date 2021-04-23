@@ -13,6 +13,7 @@ class EventEvent(models.Model):
     staff_count = fields.Integer(
         compute="_compute_staff_count", string="Total event staffs", store=True,
     )
+    note = fields.Text()
 
     @api.depends("staff_ids")
     def _compute_staff_count(self):

@@ -15,6 +15,9 @@
                     </field>
                 </page>
             </xpath>
+            <field name="date_tz" position="after">
+                <field name="note" />
+            </field>
         </field>
     </record>
 </odoo>
