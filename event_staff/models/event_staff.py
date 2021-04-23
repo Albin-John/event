@@ -11,3 +11,4 @@ class EventStaff(models.Model):
     contact = fields.Many2one("res.partner", string="Contact", required=True)
     role = fields.Many2one("event.staff.role", string="Role")
     event_id = fields.Many2one("event.event", string="Event", required=True)
+    note = fields.Text()

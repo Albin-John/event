@@ -1,5 +1,29 @@
 <?xml version="1.0" ?>
 <odoo>
+    <!-- EVENT STAFF FORM -->
+    <record id="view_event_staff_form" model="ir.ui.view">
+        <field name="name">event.staff.form</field>
+        <field name="model">event.staff</field>
+        <field name="arch" type="xml">
+            <form string="Event Staff">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="contact" />
+                        </group>
+                        <group>
+                            <field name="role" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Note" name="event_staff_note">
+                            <field name="note" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
     <!-- EVENT STAFF TREE -->
     <record id="view_event_staff_tree" model="ir.ui.view">
         <field name="name">event.staff.tree</field>
@@ -8,6 +32,7 @@
             <tree string="Event Staff" editable="top">
                 <field name="contact" />
                 <field name="role" />
+                <field name="note" />
                 <field name="event_id" invisible="1" />
             </tree>
         </field>

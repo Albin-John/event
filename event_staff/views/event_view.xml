@@ -1,22 +1,20 @@
 <?xml version="1.0" ?>
 <odoo>
-
     <record id="view_event_form_event_staff" model="ir.ui.view">
         <field name="model">event.event</field>
         <field name="inherit_id" ref="event.view_event_form" />
         <field name="arch" type="xml">
-            <xpath expr="//div[@name='button_box']" position="inside">
-                <button
-                    name="%(event_staff.act_event_staff)d"
-                    type="action"
-                    class="oe_stat_button"
-                    icon="fa-slideshare"
-                    help="Staff availables for this event"
-                >
-                    <field name="staff_count" widget="statinfo" string="Staff" />
-                </button>
+            <xpath expr="//page[@name='event_communication']" position="before">
+                <page string="Staff" name="event_staff">
+                    <field name="staff_ids">
+                        <tree string="Staff">
+                            <field name="contact" />
+                            <field name="role" />
+                            <field name="note" />
+                        </tree>
+                    </field>
+                </page>
             </xpath>
         </field>
     </record>
-
 </odoo>
